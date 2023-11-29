@@ -171,6 +171,11 @@ nav .nav-bottom .nav-bottom-center .navigation .bi-list {
   color: white;
   font-size: 16px;
   scale: 0.95;
+  cursor: pointer;
+}
+#banner .openCatalog button:hover {
+  scale: 1;
+  transition: all 0.5s ease;
 }
 #banner .banner-modal {
   width: 100%;
