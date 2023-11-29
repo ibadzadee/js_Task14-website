@@ -1,3 +1,8 @@
+let openCatalog = document.querySelector("#banner .openCatalog")
+window.addEventListener("DOMContentLoaded" ,()=>{
+    openCatalog.style.scale = "1"
+})
+
 let menu = document.querySelector(".card-basket .bi-list")
 let menuList = document.querySelector(".menu-lists")
 
@@ -13,3 +18,10 @@ menu.addEventListener("click" , ()=>{
     menu.style.transition = "all 1s ease"
 
 })
+
+let cardBasket = document.querySelector(".card-basket")
+let bannerModal = document.querySelector(".banner-modal")
+cardBasket.addEventListener("click" ,()=>{
+    bannerModal.style.visibility = "visible"
+})
+

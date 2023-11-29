@@ -14,14 +14,16 @@
 }
 
 .container {
-  max-width: 1440px;
-  padding: 0px 120px;
+  width: 100%;
+  max-width: 1110px;
+  padding: 0px 20px;
   margin: 0 auto;
 }
 
 nav {
   width: 100%;
   position: fixed;
+  z-index: 2;
   background-color: white;
   top: 0;
   left: 0;
@@ -139,15 +141,77 @@ nav .nav-bottom .nav-bottom-center .navigation .bi-list {
   justify-content: center;
   align-items: center;
 }
-#banner .modal-openCatalog {
+#banner .openCatalog {
+  width: 600px;
   background-color: white;
-  padding: 120px;
+  padding: 50px 20px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  scale: 0;
+  transition: all 1s ease;
+}
+#banner .openCatalog p {
+  color: #a5c926;
+  font-weight: 700;
+}
+#banner .openCatalog h3 {
+  font-size: 50px;
+  font-weight: 400;
+  text-align: center;
+}
+#banner .openCatalog button {
+  padding: 20px;
+  border: none;
+  border-radius: 9999px;
+  background-color: #a5c926;
+  color: white;
+  font-size: 16px;
+  scale: 0.95;
+}
+#banner .banner-modal {
+  width: 100%;
+  height: 95vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(1, 1, 1, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+}
+#banner .banner-modal .modal {
+  width: 35%;
+  opacity: 1 !important;
+  background-color: white;
+  border-radius: 20px;
+}
+#banner .banner-modal .modal .top {
+  width: 100%;
+  border-bottom: 2px solid #e5e5e5;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+#banner .banner-modal .modal .top i {
+  cursor: pointer;
+}
+#banner .banner-modal .modal .bottom {
+  width: 100%;
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#banner .banner-modal .modal .bottom i {
+  cursor: pointer;
 }
 
 @media screen and (max-width: 992px) {
-  .container {
-    padding: 0px 36px;
-  }
   nav .nav-bottom .nav-bottom-center .navigation {
     width: -moz-min-content;
     width: min-content;
