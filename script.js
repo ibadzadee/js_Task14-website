@@ -25,3 +25,8 @@ cardBasket.addEventListener("click" ,()=>{
     bannerModal.style.visibility = "visible"
 })
 
+let x = document.querySelector(".bi-x-lg")
+x.addEventListener("click" , ()=>{
+    bannerModal.style.visibility = "hidden"
+
+})
