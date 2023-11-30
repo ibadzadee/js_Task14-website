@@ -1,4 +1,6 @@
+// DomContentCoaded
 let openCatalog = document.querySelector("#banner .openCatalog")
+
 window.addEventListener("DOMContentLoaded", () => {
     openCatalog.style.scale = "1"
 })
@@ -6,8 +8,7 @@ window.addEventListener("DOMContentLoaded", () => {
 let menu = document.querySelector(" .bi-list")
 let menuList = document.querySelector(".menu-lists")
 
-console.log(menu);
-console.log(menuList);
+
 menu.addEventListener("click", () => {
     if (menuList.style.display == "none") {
         menuList.style.display = "block"
@@ -31,10 +32,38 @@ x.addEventListener("click", () => {
 
 })
 
+let navbarTop = document.querySelector(".nav-top")
+let navbarBottom = document.querySelector(".nav-bottom")
+let aNav = document.querySelectorAll(".nav-bottom a")
+let navHeight = navbarBottom.firstElementChild.firstElementChild;
+// navbarBottom.classList.add("transition");
+
+window.addEventListener("scroll" , ()=>{
+    if(window.scrollY > 80){
+        navbarTop.style.display = "none"
+        navbarBottom.style.background = "black"
+        navbarBottom.style.color = "white"
+        aNav.forEach((a) => {
+            a.style.color = "white";
+        })
+        navHeight.style.padding = "10px 0px"
+    }
+    else{
+        navbarTop.style.display = "flex"
+        navbarBottom.style.background = "white"
+        navbarBottom.style.color = "black"
+        aNav.forEach((a) => {
+            a.style.color = "";
+        });
+        navHeight.style.padding = ""
+    }
+})
+
+
 let mouseIcon = document.querySelector(".bi-mouse");
 mouseIcon.addEventListener("click", () => {
     window.scrollTo({
-        top: 650,
+        top: 700,
         behavior: 'smooth',
     });
 });
@@ -115,5 +144,6 @@ cardsWooden.forEach(item => {
             </div>
     `
 })
+
 
 

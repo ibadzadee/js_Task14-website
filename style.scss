@@ -66,6 +66,8 @@ nav {
     .nav-bottom {
         width: 100%;
         position: relative;
+        transition: background-color 0.5s, color 0.3s, padding 0.3s;
+
 
         .menu-lists {
             background-color: white;
@@ -73,8 +75,6 @@ nav {
             width: 100%;
             position: absolute;
             left: 0;
-            // top: 0;
-            // background-color: burlywood;
 
             li {
                 border: 1px solid $gray;
@@ -85,7 +85,6 @@ nav {
         .nav-bottom-center {
             width: 100%;
             padding: 20px 0px;
-            // background-color: antiquewhite;
             @include display(space-between, center);
 
             a {
@@ -110,9 +109,9 @@ nav {
 
                 li a {
                     font-weight: 300;
-                    transition: all 10s ease;
 
                     &:hover {
+                        transition: all 10s ease;
                         text-decoration: underline;
                     }
                 }
@@ -164,15 +163,13 @@ nav {
     @include display;
     flex-direction: column;
     margin: 0 auto;
+    padding: 0px 30px;
 
     .openCatalog {
-        // max-width: 35rem;
-        width: 30%;
-        min-width: 35rem;
+        margin-top: 100px;
         background-color: white;
-        padding: 50px 20px;
+        padding: 50px 70px;
         border-radius: 20px;
-        // position: absolute;
         @include display;
         flex-direction: column;
         gap: 20px;
@@ -185,14 +182,12 @@ nav {
         }
 
         h3 {
-            font-size: 50px;
+            font-size: 45px;
             font-weight: 400;
-            // width: 70%;
             text-align: center;
         }
 
         button {
-            // position: fixed;
             padding: 20px;
             border: none;
             border-radius: 9999px;
@@ -205,6 +200,7 @@ nav {
             &:hover {
                 scale: 1;
                 transition: all 0.5s ease;
+                box-shadow: 0px 7px 18px 1px $green;
             }
         }
     }
@@ -282,12 +278,12 @@ nav {
             width: 100%;
             padding: 60px 50px;
             margin-right: 20px;
-            @include display(space-around, center);
+            @include  display;
             position: relative;
             border-radius: 20px;
 
             .text {
-                @include display(center, flex-start);
+                @include display(center, center);
                 flex-direction: column;
                 gap: 20px;
 
@@ -303,7 +299,8 @@ nav {
                     font-size: 17px;
                     background-color: white;
                     cursor: pointer;
-                    &:hover{
+
+                    &:hover {
                         transform: scale(1.1);
                         transition: all 0.5s ease;
                         box-shadow: 0 0 10px black;
@@ -312,21 +309,19 @@ nav {
             }
 
             .img1 {
-                // width: 100px;
                 position: absolute;
                 bottom: 10%;
                 left: 5%;
 
                 img {
                     width: 250px;
-                    bottom: 10%;
                 }
             }
 
             .img2 {
                 img {
-                    width: 250px;
                     position: absolute;
+                    width: 250px;
                     bottom: 10%;
                     right: 5%;
 
@@ -354,7 +349,8 @@ nav {
 // ----------------------------- Stuffed ANimals -----------------------------
 // ----------------------------- Wooden Toys -----------------------------
 
-.stuffed-animals , .wooden-toys {
+.stuffed-animals,
+.wooden-toys {
     width: 100%;
     padding-top: 40px;
     padding-bottom: 70px;
@@ -374,6 +370,7 @@ nav {
             padding-left: 10px;
             font-size: 30px;
         }
+
         #text {
             font-size: 13px;
             font-weight: 700;
@@ -392,30 +389,35 @@ nav {
             right: 0;
         }
 
-        &:hover::after{
+        &:hover::after {
             background-color: $green;
             transition: all 0.5s ease;
         }
     }
+
     .line {
         width: 100%;
         height: 2px;
         margin: 40px 0px;
         background-color: $gray;
         border-radius: 9999px;
+
         .inline {
             width: 150px;
             height: 100%;
             background-color: $green;
         }
     }
+
     .card-div {
         width: 100%;
         padding: 20px 0px;
         display: grid;
-        @include display(space-between, center);
-        .cards{
-            width: 24.2%;
+        grid-template-columns: repeat(4, auto);
+        // @include display(space-between, center);
+
+        .cards {
+            width: 100%;
             padding: 30px 0px;
             @include display;
             flex-direction: column;
@@ -425,17 +427,15 @@ nav {
             border: 1px solid $gray;
             border-radius: 20px;
             scale: 0.95;
-            flex-wrap: wrap;
-
             img {
                 width: 70%;
             }
-            
+
             h3 {
                 font-size: 15px;
             }
-            
-             button {
+
+            button {
                 width: 100px;
                 background-color: $green;
                 padding: 5px;
@@ -444,20 +444,21 @@ nav {
                 border-radius: 9999px;
                 cursor: pointer;
             }
+
             &:hover {
                 cursor: pointer;
                 transition: all 0.5s ease;
                 scale: 1;
                 box-shadow: 0 0 15px gray;
-            }            
+            }
         }
     }
 }
 
 // ----------------------------- Section-5 About-the-shop -----------------------------
-.about-the-shop{
+.about-the-shop {
     width: 100%;
-    padding: 100px 320px;
+    padding: 100px 20px;
     background-image: url(./deer.jpg);
     @include image;
     background-attachment: fixed;
@@ -468,7 +469,8 @@ nav {
     position: relative;
     z-index: 1;
     text-align: center;
-    &:after{
+
+    &:after {
         content: '';
         width: 100%;
         height: 100%;
@@ -478,34 +480,328 @@ nav {
         left: 0;
         z-index: -1;
     }
-    h5{
+
+    h5 {
         font-weight: 500;
     }
-    h3{
+
+    h3 {
         font-size: 40px;
         font-weight: 400;
     }
-    button{
+
+    button {
         padding: 20px 20px;
         margin: 0 auto;
         border: none;
         background-color: $green;
         border-radius: 9999px;
         cursor: pointer;
-        &:hover{
+
+        &:hover {
             transform: scale(1.1);
             transition: all 0.5s ease;
         }
-        i{
+
+        i {
             font-size: 30px;
             color: white;
         }
     }
 }
 
+// ----------------------------- Section-6 Made for Webflow -----------------------------
+.madeForWebflow {
+    width: 100%;
+    padding: 100px 0px;
+    background-color: $back-color;
+
+    .madeForWebflow-center {
+        width: 100%;
+        @include display;
+        flex-direction: column;
+        gap: 100px;
+
+        .top {
+            width: 100%;
+            margin: 0 auto;
+            @include display;
+            flex-direction: column;
+            text-align: center;
+            gap: 20px;
+
+            p {
+                font-weight: 700;
+                color: $green;
+            }
+
+            h2 {
+                font-size: 32px;
+                width: 40%;
+                font-weight: 400;
+            }
+        }
+
+        .bottom {
+            width: 100%;
+            @include display;
+            gap: 20px;
+
+            .text {
+                width: 100%;
+
+                .divider {
+                    width: 80px;
+                    height: 3px;
+                    margin-top: 8px;
+                    margin-bottom: 23px;
+                    background-color: #a5c926;
+                }
+
+                h1 {
+                    font-size: 35px;
+                    font-weight: 400;
+                    padding-bottom: 15px;
+                }
+
+                p {
+                    // font-size: 18px;
+                    color: gray;
+                    padding-bottom: 22px;
+                }
+
+                button {
+                    padding: 15px 30px;
+                    border: none;
+                    border-radius: 9999px;
+                    background-color: $green;
+                    color: white;
+                    font-weight: 700;
+                    cursor: pointer;
+
+                    &:hover {
+                        transform: scale(1.1);
+                        transition: all 0.5s ease;
+                        box-shadow: 0px 7px 18px 1px $green;
+                    }
+                }
+            }
+
+            img {
+                width: 49%;
+                border-radius: 20px;
+            }
+
+        }
+    }
+}
+
+// ----------------------------- Section-7-subscribe     -----------------------------
+.subscribe {
+    width: 100%;
+    padding: 40px 0px;
+    background-color: $back-color;
+
+    .subscribe-center {
+        width: 100%;
+        background-color: white;
+        border-radius: 20px;
+        padding: 40px 30px;
+        box-shadow: 0 0 10px grey;
+        @include display(space-between, center);
+
+        .left {
+            display: flex;
+            @include display;
+            gap: 20px;
+
+            i {
+                font-size: 55px;
+                color: $green;
+            }
+
+            h4 {
+                font-size: 23px;
+                font-weight: 500;
+
+                span {
+                    color: $green;
+                }
+            }
+        }
+
+        .input {
+            display: flex;
+            gap: 20px;
+
+            input {
+                padding: 10px 20px;
+                padding-right: 130px;
+                background-color: $back-color;
+                border-radius: 9999px;
+                border: 1px solid gray;
+                font-size: 17px;
+            }
+
+            button {
+                padding: 15px 30px;
+                border: none;
+                border-radius: 9999px;
+                background-color: $green;
+                color: white;
+                font-weight: 700;
+                cursor: pointer;
+
+                &:hover {
+                    transform: scale(1.1);
+                    transition: all 0.5s ease;
+                    box-shadow: 0px 7px 18px 1px $green;
+                }
+            }
+        }
+    }
+}
+
+// ----------------------------- Section-8-ElasticThemes-----------------------------
+.elastic-themes {
+    width: 100%;
+    padding: 70px 0px;
+    background-color: $back-color;
+
+    .elastic-themes-center {
+        width: 100%;
+        @include display;
+        flex-direction: column;
+        gap: 80px;
+
+        .top {
+            width: 100%;
+            margin: 0 auto;
+            @include display;
+            flex-direction: column;
+            text-align: center;
+            gap: 20px;
+
+            p {
+                font-weight: 700;
+                color: $green;
+            }
+
+            h2 {
+                font-size: 40px;
+                font-weight: 400;
+            }
+        }
+
+        .bottom {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(6, auto);
+            gap: 12px;
+
+            img {
+                width: 100%;
+                border-radius: 20px;
+
+                &:hover {
+                    transform: scale(1.1);
+                    transition: all 0.5s ease;
+                    box-shadow: 0px 7px 18px 2px gray;
+                }
+            }
+        }
+
+        button {
+            padding: 20px 35px;
+            border: none;
+            border-radius: 9999px;
+            background-color: $green;
+            color: white;
+            font-weight: 700;
+            cursor: pointer;
+
+            &:hover {
+                transform: scale(1.1);
+                transition: all 0.5s ease;
+                box-shadow: 0px 7px 18px 1px $green;
+            }
+        }
+    }
+}
+
+// ----------------------------- Footer-----------------------------
+footer {
+    width: 100%;
+    padding: 40px 0px;
+    background-color: $green;
+    color: white;
+
+    .footer-center {
+        width: 100%;
+        @include display(space-between, center);
+        flex-direction: column;
+
+        .top {
+            width: 100%;
+            padding-bottom: 50px;
+            @include display(space-between, center);
+            flex-wrap: wrap;
+            gap: 50px;
+            a {
+                text-decoration: none;
+                color: white;
+            }
+
+            h3 {
+                font-size: 25px;
+                font-weight: 400;
+            }
+
+            ul {
+                display: flex;
+                gap: 30px;
+            }
+
+            li a {
+                font-weight: 300;
+
+                &:hover {
+                    transition: all 10s ease;
+                    text-decoration: underline;
+                }
+            }
+        }
+        .line{
+            width: 100%;
+            height: 1px;
+            background-color: $back-color;
+        }
+        .bottom{
+            width: 100%;
+            padding-top: 30px;
+            @include display(space-between , center);
+            font-size: 15px;
+            flex-wrap: wrap;
+            gap: 20px;
+            a{
+                color: white;
+            }
+            div{
+                @include display;
+                font-size: 13px;
+                li{
+                    list-style: disc;
+                    padding-left: 10px;
+                }
+                #li{
+                    list-style: none;
+                }
+            }
+        }
 
 
-
+    }
+}
 
 
 
@@ -519,7 +815,8 @@ nav {
 
 @media screen and (max-width:992px) {
     .container {
-        padding: 0px 36px;   
+        padding: 0px 36px;
+        @include display;
     }
 
     nav .nav-bottom .nav-bottom-center {
@@ -536,14 +833,80 @@ nav {
         }
     }
 
-    // #banner .openCatalog{
-    //     // scale: 0;
-    // }   
-    .sec-2{
-        .sec-2-center{
+    .sec-2 {
+        .sec-2-center {
             grid-template-columns: repeat(1, auto);
             width: 70%;
             margin: 0 auto;
         }
-    } 
+    }
+    .stuffed-animals .card-div, .wooden-toys .card-div{
+        grid-template-columns: repeat(2, auto);
+
+    }
+
+    .madeForWebflow .madeForWebflow-center .bottom {
+        flex-direction: column-reverse;
+
+        .text {
+            @include display;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        img {
+            width: 90%;
+        }
+    }
+
+    .subscribe .subscribe-center {
+        width: 70%;
+        flex-direction: column;
+        gap: 30px;
+
+        .input {
+            width: 100%;
+            flex-direction: column;
+        }
+    }
+
+    .elastic-themes .elastic-themes-center .bottom {
+        grid-template-columns: repeat(3, auto);
+    }
+}
+
+
+
+
+
+@media screen and (max-width:479px) {
+    .stuffed-animals .card-div, .wooden-toys .card-div{
+        grid-template-columns: repeat(1, auto);
+
+    }
+    .sec-2 {
+        .sec-2-center {
+            grid-template-columns: repeat(1, auto);
+            width: 70%;
+            margin: 0 auto;
+        }
+    }
+}
+
+
+@media screen and (max-width :760px) {
+    #banner .openCatalog {
+        padding: 30px;
+        margin-top: 40px;
+    }
+    // .sec-2 .sec-2-center .text{
+    // //    margin-top: 100px;
+    // }
+}
+
+@media screen and (max-width :552px) {
+    #banner .openCatalog {
+        margin-top: 150px;
+        padding: 15px;
+    }
 }
