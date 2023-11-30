@@ -35,11 +35,10 @@ let mouseIcon = document.querySelector(".bi-mouse");
 mouseIcon.addEventListener("click", () => {
     window.scrollTo({
         top: 650,
-        left: 0,
         behavior: 'smooth',
     });
+});
 
-})
 
 // stuffed-animals
 let cardDiv = document.querySelector('.stuffed-animals .card-div')
