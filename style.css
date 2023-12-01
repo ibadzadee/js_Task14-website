@@ -62,8 +62,6 @@ nav .nav-bottom .menu-lists {
   background-color: white;
   display: none;
   width: 100%;
-  position: absolute;
-  left: 0;
 }
 nav .nav-bottom .menu-lists li {
   border: 1px solid #e5e5e5;
@@ -132,6 +130,7 @@ nav .nav-bottom .nav-bottom-center .navigation .bi-list {
   font-size: 30px;
   border-left: 2px solid gray;
   padding-left: 10px;
+  cursor: pointer;
 }
 
 #banner {
@@ -783,6 +782,10 @@ footer .footer-center .bottom div #li {
     width: 70%;
     flex-direction: column;
     gap: 30px;
+  }
+  .subscribe .subscribe-center .left {
+    flex-direction: column;
+    text-align: center;
   }
   .subscribe .subscribe-center .input {
     width: 100%;

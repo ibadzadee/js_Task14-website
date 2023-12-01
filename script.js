@@ -1,6 +1,5 @@
 // DomContentCoaded
 let openCatalog = document.querySelector("#banner .openCatalog")
-
 window.addEventListener("DOMContentLoaded", () => {
     openCatalog.style.scale = "1"
 })
@@ -38,8 +37,8 @@ let aNav = document.querySelectorAll(".nav-bottom a")
 let navHeight = navbarBottom.firstElementChild.firstElementChild;
 // navbarBottom.classList.add("transition");
 
-window.addEventListener("scroll" , ()=>{
-    if(window.scrollY > 80){
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 80) {
         navbarTop.style.display = "none"
         navbarBottom.style.background = "black"
         navbarBottom.style.color = "white"
@@ -48,7 +47,7 @@ window.addEventListener("scroll" , ()=>{
         })
         navHeight.style.padding = "10px 0px"
     }
-    else{
+    else {
         navbarTop.style.display = "flex"
         navbarBottom.style.background = "white"
         navbarBottom.style.color = "black"

@@ -73,8 +73,6 @@ nav {
             background-color: white;
             display: none;
             width: 100%;
-            position: absolute;
-            left: 0;
 
             li {
                 border: 1px solid $gray;
@@ -148,6 +146,7 @@ nav {
                     font-size: 30px;
                     border-left: 2px solid gray;
                     padding-left: 10px;
+                    cursor: pointer;
                 }
             }
         }
@@ -857,7 +856,10 @@ footer {
         width: 70%;
         flex-direction: column;
         gap: 30px;
-
+        .left{
+            flex-direction: column;
+            text-align: center;
+        }
         .input {
             width: 100%;
             flex-direction: column;
