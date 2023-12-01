@@ -63,7 +63,7 @@ window.addEventListener("scroll" , ()=>{
 let mouseIcon = document.querySelector(".bi-mouse");
 mouseIcon.addEventListener("click", () => {
     window.scrollTo({
-        top: 700,
+        top: 920,
         behavior: 'smooth',
     });
 });

@@ -272,18 +272,24 @@ nav {
         display: grid;
         grid-template-columns: repeat(2, auto);
         gap: 20px;
-
+        
         .left,
         .right {
             width: 100%;
-            padding: 60px 50px;
-            margin-right: 20px;
-            @include  display;
-            position: relative;
+            @include display(space-between, center);
             border-radius: 20px;
+            padding: 0px 40px;
+            img {
+                width: 200px;
+                height: 100%;
+                position: relative;
+                bottom: 40px;
+                // @include display;
+            }
 
-            .text {
-                @include display(center, center);
+            .text { 
+                width: 100%;
+                @include display;
                 flex-direction: column;
                 gap: 20px;
 
@@ -307,39 +313,13 @@ nav {
                     }
                 }
             }
-
-            .img1 {
-                position: absolute;
-                bottom: 10%;
-                left: 5%;
-
-                img {
-                    width: 250px;
-                }
-            }
-
-            .img2 {
-                img {
-                    position: absolute;
-                    width: 250px;
-                    bottom: 10%;
-                    right: 5%;
-
-                }
-            }
         }
 
         .left {
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
             background-color: $orange;
         }
 
         .right {
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
             background-color: $pink;
         }
     }
@@ -427,6 +407,7 @@ nav {
             border: 1px solid $gray;
             border-radius: 20px;
             scale: 0.95;
+
             img {
                 width: 70%;
             }
@@ -747,6 +728,7 @@ footer {
             @include display(space-between, center);
             flex-wrap: wrap;
             gap: 50px;
+
             a {
                 text-decoration: none;
                 color: white;
@@ -771,29 +753,35 @@ footer {
                 }
             }
         }
-        .line{
+
+        .line {
             width: 100%;
             height: 1px;
             background-color: $back-color;
         }
-        .bottom{
+
+        .bottom {
             width: 100%;
             padding-top: 30px;
-            @include display(space-between , center);
+            @include display(space-between, center);
             font-size: 15px;
             flex-wrap: wrap;
             gap: 20px;
-            a{
+
+            a {
                 color: white;
             }
-            div{
+
+            div {
                 @include display;
                 font-size: 13px;
-                li{
+
+                li {
                     list-style: disc;
                     padding-left: 10px;
                 }
-                #li{
+
+                #li {
                     list-style: none;
                 }
             }
@@ -836,11 +824,17 @@ footer {
     .sec-2 {
         .sec-2-center {
             grid-template-columns: repeat(1, auto);
-            width: 70%;
+            width: 75%;
             margin: 0 auto;
+            .right{
+                position: relative;
+                top: 50px;
+            }
         }
     }
-    .stuffed-animals .card-div, .wooden-toys .card-div{
+
+    .stuffed-animals .card-div,
+    .wooden-toys .card-div {
         grid-template-columns: repeat(2, auto);
 
     }
@@ -880,15 +874,27 @@ footer {
 
 
 @media screen and (max-width:479px) {
-    .stuffed-animals .card-div, .wooden-toys .card-div{
+
+    .stuffed-animals .card-div,
+    .wooden-toys .card-div {
         grid-template-columns: repeat(1, auto);
 
     }
+
     .sec-2 {
         .sec-2-center {
             grid-template-columns: repeat(1, auto);
             width: 70%;
             margin: 0 auto;
+            .left{
+                flex-direction: column;
+                padding-bottom: 40px;
+
+            }
+            .right{
+                flex-direction: column-reverse;
+                padding-bottom: 40px;
+            }
         }
     }
 }
@@ -899,14 +905,28 @@ footer {
         padding: 30px;
         margin-top: 40px;
     }
-    // .sec-2 .sec-2-center .text{
-    // //    margin-top: 100px;
-    // }
+    .sec-2 {
+        .sec-2-center {
+            grid-template-columns: repeat(1, auto);
+            width: 100%;
+            margin: 0 auto;
+
+        }
+    }
+
+
 }
 
 @media screen and (max-width :552px) {
     #banner .openCatalog {
         margin-top: 150px;
         padding: 15px;
+    }
+    .sec-2 {
+        .sec-2-center {
+            grid-template-columns: repeat(1, auto);
+            width: 100%;
+            margin: 0 auto;
+        }
     }
 }
